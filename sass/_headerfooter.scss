@@ -1,0 +1,45 @@
+/* -----NAVBAR----- */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+nav.navbar {
+    background-color: #b70f15;
+}
+
+.nav-link {
+    font-size:18px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #d1c8c8
+}
+
+#toggler, .navbar label {
+    display: none;
+}
+
+.fa-bars:before {
+    color: #ffffff;
+    font-size: 27px;
+}
+
+/* -----FOOTER----- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b70f15;
+    padding: 7px;
+
+    span {
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+    }
+}
