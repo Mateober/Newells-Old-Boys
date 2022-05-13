@@ -1,75 +1,45 @@
-.escudos__escudos {
-    gap: 40px;
+.estadio__background {
+    background-color: $colorBlack;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    div {
-        padding: 1rem;
-        background-color: #181a1b;
-        border: 5px solid #B70F15;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 292px;
-        height: 340px;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
     }
 
-    img {
-        width: 250px;
-        height: 250px;
-    }
-}
-
-/* FONTS */
-
-.escudos__title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    color: #ffffff;
-    padding-bottom: 2rem;
-    text-align: center;
-}
-
-.escudos__escudos {
-    p {
-        font-family: 'Roboto', sans-serif;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 400;
-        color: #ffffff;
-    }
-
-}
-
-/* MEDIAQUERIS */
-@media screen and (max-width:720px) {
-    .escudos__escudos {
-        gap: 10px;
-        div {
-            border: 3px solid #B70F15;
-            width: 160px;
-            height: 210px;
-        }
-    
+.estadio__imgestadio {
+        width: 100%;
+        height: auto;
         img {
-            width: 150px;
-            height: 150px;
+            width: 100%;
+            height: 100%;
         }
+}
+
+.estadio__description {
+    margin: 2rem;
+    max-width: 800px;
+    img {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width:720px) {
+    
+    .estadio__description {
+        margin: 1rem
+    }
+
+    .escudo__title {
+        @extend .fontTemplate;
+        font-size: 20px;
+        padding-top: 20px
     }
     
-    /* FONTS */
-    
-    .escudos__title {
-        font-size: 23px;
-        padding: 5px;
-    }
-    
-    .escudos__escudos {
-        p {
-            font-size: 20px;
-        }
+    .estadio__text {
+        @extend .fontTemplate;
+        font-size: 16px;    
+        padding: 10px 0 10px 0;
     }
 }

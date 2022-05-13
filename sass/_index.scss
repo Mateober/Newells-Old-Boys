@@ -12,10 +12,6 @@
         align-items: center;
     }
     &--title {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 54px;
-        color: #ffffff;
         text-align: center;
     }
 }
@@ -23,12 +19,10 @@
 .index__container {
     padding: 20px;
     margin-bottom: 70px;
-    background-color: #181a1b;
-    border: 5px solid #B70F15;
+    background-color: $colorBlack;
+    border: 5px solid $colorRed;
     display: flex;
-    justify-content: space-evenly;
     flex-direction: row;
-    align-items: center;
 }
 
 /* ESTADIO */
@@ -37,18 +31,13 @@
         width: 75%;
         height: auto;
         padding: 0 12px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        @include containerContainer (column);
     }
     &--img {
         width: 25%;
         height: auto;
         padding: 0 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include containerContainer (row);
     }
 }
 /* ESCUDOS */
@@ -57,18 +46,13 @@
         width: 70%;
         height: auto;
         padding: 0 12px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+        @include containerContainer (column);
     }
     &--img {
         width: 30%;
         height: auto;
         padding: 0 12px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        @include containerContainer (row);
 
         img {
             width: 150px;
@@ -83,17 +67,13 @@
         height: auto;
         padding: 0 12px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+        @include containerContainer (column);
     }
     &--img {
         width: 30%;
         height: auto;
         padding: 0 12px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        @include containerContainer (row);
         align-content: center;
         flex-wrap: wrap;
 
@@ -105,29 +85,18 @@
 }
 /* CAMISETAS */
 .index__camisetas {
-    display: flex;
-    flex-direction: column;
+    @include containerContainer (column);
     width: 100%;
     height: auto;
     &--info {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+        @include containerContainer (column);
 
         h3 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 27px;
-            font-style: normal;
-            font-weight: 400;
-            color: #ffffff;
             padding-top: 10px;
         }
     }
     &--img {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        @include containerContainer (row);
         img {
             width: 100%;
             height: auto;
@@ -136,20 +105,12 @@
 }
 /* UBICACION */
 .index__ubicacion {
-    display: flex;
-    flex-direction: column;
+    @include containerContainer (column);
     width: 70%;
     height: auto;
     margin: 0 auto;
-    margin-bottom: 70px;
-
-    a {
-        color: #ffffff;
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-size: 20px;    
-        font-weight: 400;
-    }
+    margin-bottom: 70px;;
+    text-align: center;
 
     &--map {
         width: 100%;
@@ -163,34 +124,23 @@
 }
 
 .index__contactoredes {
-    display: flex;
-    flex-direction: row;
+    @include containerContainer (row);
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    text-align: center;
     color: #ffffff;
 }
 
 .index__contacto {
-    display: flex;
-    flex-direction: column;
+    @include containerContainer (column);
+    text-align: center;
     margin-bottom: 37px;
    
     h3 {
-        color: #ffffff;
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-size: 28px;    
-        font-weight: 400;
         padding: 10px 0;
     }
 
     li {
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-size: 20px;    
-        font-weight: 400;
         padding: 10px 0;
 
         .fa-envelope, .fa-phone {
@@ -200,17 +150,12 @@
 }
 
 .index__redes {
-    display: flex;
-    flex-direction: column;
+    @include containerContainer (column);
     text-align: justify;
     margin-bottom: 37px;
     
     li {
         padding: 8px 0;
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-size: 20px;    
-        font-weight: 400;
 
         a {
             color: #ffffff;
@@ -240,7 +185,7 @@
     }
 /* container */
     .index__container {
-        border: 3px solid #B70F15;
+        border: 3px solid $colorRed;
         width: 100%;
         height: auto;
         padding: 10px;
@@ -296,24 +241,27 @@
     }
 
     .index__text {
-        font-size: 13px;
+        font-size: 16px;
         padding: 10px;
     }
 
+    .index__subtitle {
+        font-size: 16px;
+    }
+    
+    .index__subsubtitle {
+        font-size: 15px;
+    }
+
     .index__button {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .index__camisetas h3 {
-        font-size: 13px;
         padding-top: 3px;
     }
 
     .index__ubicacion {
-        a {
-            font-size: 13px;
-        }
-
         &--map {
             width: 90%;
             height: 300px;
@@ -324,11 +272,7 @@
     }
 
     .index__contacto {
-        h3 {
-            font-size: 13px;
-        }
         li {
-            font-size: 13px;
             padding: 6px;
         }
     }
@@ -336,7 +280,6 @@
     .index__redes {
         li {
             padding: 3px 0;
-            font-size: 13px;
             .fa-twitter, .fa-youtube {
                 padding-right: 5px;
             }

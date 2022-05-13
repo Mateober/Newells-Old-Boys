@@ -1,27 +1,56 @@
 .index__button {
-    color: #ffffff;
+    @extend .fontTemplate;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
     font-size: 18px;
     font-weight: 300;
 }
 
-/* INDEX */
+/* ----------INDEX---------- */
+
+.index__index--title { 
+    @extend .fontTemplate;
+    font-weight: 700;
+    font-size: 54px;
+}
+
 .index__title{
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
+    @extend .fontTemplate;
     font-size: 40px;
     font-weight: 400;
+    text-align: center
 }
 .index__text{
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
+    @extend .fontTemplate;
     font-size: 25px;    
     font-weight: 300;
     text-align: justify;
     padding: 30px 0;
 }
 
+.index__subtitle {
+    @extend .fontTemplate;
+    font-size: 27px;    
+    font-weight: 400;
+}
+
+.index__subsubtitle {
+    @extend .fontTemplate;
+    font-size: 20px;    
+    font-weight: 400;
+}
+
+/* ----------ESTADIO---------- */
+.escudo__title {
+    @extend .fontTemplate;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 40px
+}
+
+.estadio__text {
+    @extend .fontTemplate;
+    font-size: 25px;    
+    font-weight: 300;
+    padding: 20px 0 20px 0;
+}

@@ -4,18 +4,17 @@
 }
 
 nav.navbar {
-    background-color: #b70f15;
-}
+    background-color: $colorRed;
 
-.nav-link {
-    font-size:18px;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    color: #ffffff;
-}
+    .nav-link {
+        @extend .fontTemplate;
+        font-size:18px;
+        text-transform: uppercase;
 
-.nav-link:hover {
-    color: #d1c8c8
+        &:hover {
+        color: #a8a8a8;
+    }
+  }
 }
 
 #toggler, .navbar label {
@@ -32,14 +31,40 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #b70f15;
+    background-color: $colorRed;
     padding: 7px;
 
     span {
-        color: #ffffff;
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
+        @extend .fontTemplate;
         font-weight: 300;
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width:720px) {
+
+    nav {
+        img {
+            width: 120px;
+            height: auto;
+        }
+        .fa-bars:before {
+            font-size: 23px;
+        }
+    }
+    nav.navbar {
+        .nav-link {
+            font-size:15px;
+        }
+      }
+
+    footer {
+        img {
+            width: 100px;
+            height: auto;
+        }
+        span {
+            font-size: 9px;
+        }
     }
 }
