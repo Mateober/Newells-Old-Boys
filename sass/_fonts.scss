@@ -9,8 +9,8 @@
 
 .index__index--title { 
     @extend .fontTemplate;
-    font-weight: 700;
     font-size: 54px;
+    font-weight: 700;
 }
 
 .index__title{
@@ -52,5 +52,7 @@
     @extend .fontTemplate;
     font-size: 25px;    
     font-weight: 300;
-    padding: 20px 0 20px 0;
+    padding: 30px 0 30px 0;
+    text-align: left;
+    line-height: 30px;
 }

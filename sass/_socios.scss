@@ -1,0 +1,271 @@
+.socios__inicio {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    height: auto;
+    &--left {
+        width: 50%;
+        background-image: url(../images/fondo-socios-1.jpg);
+        background-size: cover;
+
+    }
+    &--right {
+        width: 50%;
+        background-image:url(../images/fondo-socios-negro.jpg);
+        background-size: cover;
+        padding: 200px 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            padding-bottom: 36px;
+            @extend .fontTemplate;
+            font-size: 36px;
+        }
+        p {
+            @extend .fontTemplate;
+            font-size: 20px;
+            padding-bottom: 16px;
+        }
+    }
+}
+
+.socios__formarparte {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &--container {    
+        max-width: 800px;
+        margin: 48px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--img {
+        width: auto;
+        height: auto;
+        padding-bottom: 48px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &--info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            @extend .fontTemplate;
+            color: black;
+            font-size: 30px;
+            font-weight: 400;
+            padding-bottom: 20px;
+        }
+        p {
+            @extend .fontTemplate;
+            color: black;
+            font-size: 24px;
+            font-weight: 400;
+            padding-bottom: 20px;
+        }
+        a {
+            color: black;
+            @extend .fontTemplate;
+            font-size: 24px;
+            font-weight: 400;
+            i {
+                color: red;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+.socios__atencion {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    flex-wrap: wrap;
+    &--atencion {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 55px 105px;
+        width: 50%;
+        height: auto;
+        p {
+            @extend .fontTemplate;
+            font-weight: 400;
+            font-size: 16px;
+            
+        }
+        i {
+            font-size: 30px;
+            padding-right: 30px;
+            color: #ffffff;
+        }
+    }
+}
+
+.socios__planes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+        @extend .fontTemplate;
+        font-weight: 700;
+        font-size: 34px;
+        color: black;
+        padding: 50px 0;        
+    }
+    p {
+        @extend .fontTemplate;
+        font-weight: 400;
+        font-size: 24px;
+        color: black;
+        padding: 0 10px;
+        text-align: center; 
+    }
+}
+
+.socios__socios {
+    text-align: center;
+    padding: 4rem 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .socios__tarjeta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        box-shadow: 0 11px 23px 11px #00000017;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 30px 15px;
+        max-width: 400px;
+
+        img {
+        width: 80%;
+        height: auto;
+        }
+        h3 {
+            @extend .fontTemplate;
+            font-weight: 400;
+            font-size: 40px;
+            padding-bottom: 8px;
+            color: black
+        }
+        span {
+            @extend .fontTemplate;
+            font-weight: 400;
+            font-size: 16px;
+            margin: 0 28px;
+            color: red
+        }
+        p {
+            @extend .fontTemplate;
+            font-weight: 400;
+            font-size: 16px;
+            padding-bottom: 8px;
+            padding: 36px 20px;
+            color: black;
+            text-align: left;    
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .socios__inicio {
+        &--left {
+            display: none;
+        }
+        &--right {
+            width: 100%;
+            padding: 30px;
+            h2 {
+                font-size: 26px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+    .socios__atencion {
+        &--atencion {
+            width: 50%;
+            padding: 20px 20px;
+        }
+    }
+
+    .socios__socios {
+        padding: 4rem 20px;
+        .socios__tarjeta {
+            max-width: 300px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:720px) {
+    .socios__inicio {
+        &--left {
+            display: none;
+        }
+        &--right {
+            width: 100%;
+            padding: 30px;
+            h2 {
+                font-size: 26px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .socios__formarparte {
+        &--info {
+            h3 {
+                font-size: 23px;
+            }
+            p {
+                font-size: 16px;
+            }
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .socios__atencion {
+        &--atencion {
+            width: 100%;
+            padding: 20px 20px;
+        }
+    }
+
+    .socios__planes {
+        h3 {
+            font-size: 24px;
+            padding: 20px 0;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .socios__socios {
+        padding: 20px 20px;
+        padding-top: 10px;
+    }
+}

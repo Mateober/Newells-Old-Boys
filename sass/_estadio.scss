@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: justify;
     }
 
 .estadio__imgestadio {
@@ -28,7 +27,7 @@
 @media screen and (max-width:720px) {
     
     .estadio__description {
-        margin: 1rem
+        margin: 20px
     }
 
     .escudo__title {
@@ -40,6 +39,7 @@
     .estadio__text {
         @extend .fontTemplate;
         font-size: 16px;    
-        padding: 10px 0 10px 0;
+        padding: 20px 0 20px 0;
+        line-height: 20px;
     }
 }
