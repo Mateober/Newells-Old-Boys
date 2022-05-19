@@ -1,19 +1,2 @@
 $colorBlack: #181a1b;
 $colorRed: #b70f15;
-
-$rrss: (
-    instagram: #8f39b8,
-    twitter: #2677e0,
-    youtube: #be0c0c,
-    facebook: #0c18c9,
-);
-
-@each $name, $color in $rrss {
-    .#{$name} {
-        background-color: $color;
-        margin: 10px 5px;
-        padding: 10px;
-        color: #fff;
-        border-radius: 20px;
-    }
-}
