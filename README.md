@@ -6,3 +6,8 @@
 - Sass
 - Git
 - GitHub
+
+### 📌 Contact me at:
+
+- https://www.linkedin.com/in/mateo-bertello/
+- mateo.bertello@gmail.com
